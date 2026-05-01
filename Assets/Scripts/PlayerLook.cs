@@ -5,6 +5,7 @@ public class PlayerLook : MonoBehaviour
 {
     [Header("Bakış Ayarları")]
     public float mouseSensitivity = 10f;
+    public Transform playerBody; // FPS yürüme için eklendi
     
     private float xRotation = 0f;
     private float yRotation = 0f;
@@ -39,13 +40,21 @@ public class PlayerLook : MonoBehaviour
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f); // Boynun kırılmasını önler
 
-        // Sağa sola bakma (Y ekseni dönüşü)
-        yRotation += mouseX;
-        // Sandalyede çok fazla arkaya dönememesi için limit
-        yRotation = Mathf.Clamp(yRotation, -70f, 70f);
-
-        // Kameranın dönüşünü uygula
-        transform.localRotation = Quaternion.Euler(xRotation, yRotation, 0f);
+        // Sağa sola bakma
+        if (playerBody != null)
+        {
+            // FPS Yürüme modu: Tüm vücut sağa sola döner
+            playerBody.Rotate(Vector3.up * mouseX);
+            // Sadece kamerayı yukarı/aşağı çevir
+            transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        }
+        else
+        {
+            // Oturma modu: Sadece kamera döner
+            yRotation += mouseX;
+            yRotation = Mathf.Clamp(yRotation, -70f, 70f);
+            transform.localRotation = Quaternion.Euler(xRotation, yRotation, 0f);
+        }
 
         // Gaze Tracking (Bakış takibi) simülasyonu
         TrackGaze();
