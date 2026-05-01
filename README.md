@@ -1,6 +1,6 @@
-# Escape The Routine
+# The Last Shift
 
-**Escape The Routine**, sıradan bir ofis çalışanı simülasyonu gibi başlayan, ancak oyuncunun "rutin hataları" yaparak sisteme isyan etmesiyle sürreal bir dijital arenaya ve boss savaşına dönüşen birinci şahıs (FPS) bir bilim-kurgu oyunudur. 
+**The Last Shift**, sıradan bir ofis çalışanı simülasyonu gibi başlayan, ancak oyuncunun "rutin hataları" yaparak sisteme isyan etmesiyle sürreal bir dijital arenaya ve boss savaşına dönüşen birinci şahıs (FPS) bir bilim-kurgu oyunudur. 
 
 Bu proje **NeoX** takımı tarafından Game Jam için geliştirilmiştir.
 
