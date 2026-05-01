@@ -1,0 +1,48 @@
+# Unity projesi için standart gitignore
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# Visual Studio / IDE önbellekleri
+.vs/
+.gradle/
+.idea/
+.vscode/
+
+# Otomatik oluşturulan proje dosyaları
+ExportedObj/
+.consulo/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Crash ve build dosyaları
+sysinfo.txt
+*.apk
+*.aab
+*.unitypackage
+*.app
+
+# Mac OS görünmez dosyaları
+.DS_Store
+
+# Özel Tasarım / GDD Dosyalarını yoksay
+*.md
+!README.md
